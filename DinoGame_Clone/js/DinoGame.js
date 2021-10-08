@@ -1,1 +1,0 @@
-// Dino Game Clone with hand control
