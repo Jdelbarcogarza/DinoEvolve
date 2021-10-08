@@ -2,7 +2,7 @@
 ---
 
 ### Autores
- * dev1
+ * Carlos David Sandoval Vargas
  * dev2
  * dev3
  * dev4
