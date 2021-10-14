@@ -3,6 +3,6 @@
 
 ### Autores
  * Carlos David Sandoval Vargas
- * dev2
+ * Jorge Del Barco Garza
  * dev3
  * dev4
