@@ -16,6 +16,8 @@
 <!--https://thumbs.dreamstime.com/z/open-hand-20912298.jpg-->
 <!--https://th.bing.com/th/id/R.58f43dafc6e22e6e1d92957ea391fdc4?rik=yLvpleN9YzU61Q&riu=http%3a%2f%2fthumbs.dreamstime.com%2fz%2fopen-hand-20912298.jpg&ehk=TY0ertIolDzapUb72e%2fjIDfcq0tYRNUVxD0QqXUc9ys%3d&risl=&pid=ImgRaw&r=0-->
 <!-- Place your code in the script tag below. You can also use an external .js file -->
+<script type="module" src="/DinoGame_Clone/index.js"></script>
+
 <script type="module">
   const img = document.getElementById('img'); 
   const model =  await handTrack.load();
@@ -23,11 +25,9 @@
   
   /* Esto ya me da el label que es lo que queremos. Retorna "open"
   Entonces en el juego del dinosaurio if "open" then jump. */
-  console.log(predictions[0]);
-  
-
-
+  console.log(predictions[0]["label"]);
 </script>
+
 <body>
     
 
