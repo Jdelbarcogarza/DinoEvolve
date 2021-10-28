@@ -10,6 +10,28 @@ body {
   height: 100%;
 }
 
+/* Tabla */
+table, th, td {
+  border: 1px solid black;
+}
+
+#keywords {
+  margin: 0 auto;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+#keywords thead tr th { 
+  font-weight: bold;
+  padding: 12px 30px;
+  padding-left: 52px;
+  background: #c9dff0;
+  padding-right: 60px;
+}
+#keywords tbody tr td {
+  padding: 15px 10px;
+}
+
 .icon {
   -webkit-user-select: none;
   user-select: none;
