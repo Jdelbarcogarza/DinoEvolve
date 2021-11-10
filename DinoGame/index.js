@@ -2,6 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 // extract from chromium source code by @liuwayong
+
+var currentUsername = "Hello World";
+var scores = [0, 0, 0];
+var usernames = ["Cookie Monster", "Dog", "Cat"];
+
 (function () {
     'use strict';
     /**
@@ -793,6 +798,38 @@
                 this.highestScore = Math.ceil(this.distanceRan);
                 this.distanceMeter.setHighScore(this.highestScore);
             }
+
+            // Get username
+            currentUsername = document.querySelector('input').value;
+            if (currentUsername == "")
+            {
+                currentUsername = "Unnamed Player";
+            }
+
+            // Update scores
+            for (let i = 0; i < scores.length; i++)
+            {
+                // If distanceRan is higher than any of the saved scores
+                if (this.distanceRan >= scores[i])
+                {
+                    scores.splice(i, 0, Math.ceil(this.distanceRan));
+                    scores.pop();
+                    usernames.splice(i, 0, currentUsername);
+                    usernames.pop();
+                    break;
+                }
+            }
+
+            // Update table of scores
+            document.querySelector('#player1').innerHTML = usernames[0];
+            document.querySelector('#score1').innerHTML = scores[0];
+            document.querySelector('#player2').innerHTML = usernames[1];
+            document.querySelector('#score2').innerHTML = scores[1];
+            document.querySelector('#player3').innerHTML = usernames[2];
+            document.querySelector('#score3').innerHTML = scores[2];
+
+            // Clear Input cell
+            document.querySelector('input').value = "";
 
             // Reset the time clock.
             this.time = getTimeStamp();
